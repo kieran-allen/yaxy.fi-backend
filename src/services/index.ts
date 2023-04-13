@@ -1,1 +1,0 @@
-export { jwtCreate } from './jwtCreate';

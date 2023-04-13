@@ -1,6 +1,5 @@
 import app from '~app';
-import { jwtCreate } from '~services';
-import { ENV, logger } from '~utils';
+import { ENV, jwtCreate, logger } from '~utils';
 
 app.listen(ENV.PORT, () => {
   jwtCreate();

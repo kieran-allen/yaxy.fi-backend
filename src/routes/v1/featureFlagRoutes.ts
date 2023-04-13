@@ -1,5 +1,3 @@
-// src/routes/featureFlagRoutes.ts
-
 import { Router } from 'express';
 import { featureFlagController } from '~controllers';
 import { isValidCreateFeatureFlagMiddleware } from '~middlewares';
