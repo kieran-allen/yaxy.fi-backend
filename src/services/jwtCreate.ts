@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
-
-const JWT_SECRET = process.env.JWT_SECRET;
+import { ENV } from '~utils';
 
 const payload = {
   userId: 'Kieran Allen',
@@ -12,7 +11,7 @@ const options = {
 };
 
 export const jwtCreate = () => {
-  const token = jwt.sign(payload, JWT_SECRET ?? '', options);
+  const token = jwt.sign(payload, ENV.JWT_SECRET, options);
 
   console.log('JWT Token:', token);
 };

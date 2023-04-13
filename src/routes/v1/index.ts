@@ -1,12 +1,11 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import { featureFlagRoutes } from './featureFlagRoutes';
 
 const routesV1 = express.Router();
 
-routesV1.get('/', (req: Request, res: Response) => {
-  res.status(200).json({
-    name: 'Foo',
-    occupation: 'Bar Engineer',
-  });
-});
 
-export { routesV1 };
+routesV1.use('/feature_flags', featureFlagRoutes);
+
+export {
+  routesV1
+}

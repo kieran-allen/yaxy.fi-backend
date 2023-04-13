@@ -1,10 +1,8 @@
 import app from '~app';
 import { jwtCreate } from '~services';
-import { logger } from '~utils';
+import { ENV, logger } from '~utils';
 
-const PORT = process.env.PORT;
-
-app.listen(PORT, () => {
+app.listen(ENV.PORT, () => {
   jwtCreate();
-  logger.info(`yaxy.fi server starting on port:${PORT}`);
+  logger.info(`yaxy.fi server starting on port:${ENV.PORT}`);
 });

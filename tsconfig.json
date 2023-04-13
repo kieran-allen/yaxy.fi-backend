@@ -19,7 +19,8 @@
       "~models": ["models/index.ts"],
       "~routes": ["routes/index.ts"],
       "~services": ["services/index.ts"],
-      "~utils": ["utils/index.ts"]
+      "~utils": ["utils/index.ts"],
+      "~types": ["types/index.ts"],
     }
   },
   "include": ["src/**/*.ts"],
